@@ -1,5 +1,6 @@
 ---
 const today = new Date();
+import './Footer.pcss'
 ---
 
 <footer>
@@ -66,26 +67,3 @@ const today = new Date();
     </li>
   </ul>
 </footer>
-<style>
-  footer {
-    padding: 1em 1em 1em 1em;
-    background: linear-gradient(var(--gray-gradient)) no-repeat;
-    color: rgb(var(--gray));
-    text-align: center;
-  }
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    margin-top: 1em;
-    padding: 0;
-    list-style-type: none;
-  }
-  .social-links a {
-    text-decoration: none;
-    color: rgb(var(--gray));
-  }
-  .social-links a:hover {
-    color: rgb(var(--gray-dark));
-  }
-</style>
