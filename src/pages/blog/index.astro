@@ -1,28 +1,29 @@
 ---
-import BaseHead from "../../components/BaseHead/BaseHead.astro";
+// import BaseHead from "../../components/BaseHead/BaseHead.astro";
 import Header from "../../components/Header/Header.astro";
 import Footer from "../../components/Footer/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+// import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
-import FormattedDate from "../../components/FormattedDate/FormattedDate.astro";
+// import FormattedDate from "../../components/FormattedDate/FormattedDate.astro";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 
-import "index.pcss";
+import "./blog-index.pcss";
+
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <!-- <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} /> -->
   </head>
   <body>
     <Header />
     <main>
       <section>
-        <ul>
+        <!-- <ul>
           {
             posts.map((post) => (
               <li>
@@ -41,7 +42,7 @@ import "index.pcss";
               </li>
             ))
           }
-        </ul>
+        </ul> -->
       </section>
     </main>
     <Footer />
